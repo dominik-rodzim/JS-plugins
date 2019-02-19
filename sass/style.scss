@@ -1,3 +1,19 @@
+$break-lg: 1200px;
+$break-md: 992px;
+$break-sm: 768px;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == break-sm {
+        @media only screen and (max-width: $break-sm) { @content };
+    }
+    @if $breakpoint == break-md {
+        @media only screen and (max-width: $break-md) { @content };
+    }
+    @if $breakpoint == break-lg {
+        @media only screen and (max-width: $break-lg) { @content };
+    }
+}
+
 .main-carousel {
 	position: relative;
 	.carousel-cell {
@@ -38,6 +54,9 @@
     letter-spacing: 2px;
     transition: .3s;
     cursor: pointer;
+    @include respond(break-sm) {
+    	font-size: 15px;
+    }
     &:hover {
     	letter-spacing: 3px;
     }
@@ -49,4 +68,7 @@ h2 {
     background: rgba(255, 255, 255, 0.7);
     font-size: 60px;
     color: orange;
+    @include respond(break-sm) {
+    	font-size: 26px;
+    }
 }

@@ -46,6 +46,12 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  #reset {
+    font-size: 15px;
+  }
+}
+
 #reset:hover {
   letter-spacing: 3px;
 }
@@ -56,5 +62,11 @@ h2 {
   background: rgba(255, 255, 255, 0.7);
   font-size: 60px;
   color: orange;
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 26px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
