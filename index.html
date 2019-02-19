@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Plugins</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+    </head>
+    <body>
+		<div class="main-carousel" data-flickity='{ "hash": true }'>
+		  <div style="background-image: url(images/slide-1.jpg)" class="carousel-cell" id="carousel-cell1">
+		  	<div class="container">
+		  		<h2>Najlepsze pizze</h2>
+		  	</div>
+		  </div>
+		  <div style="background-image: url(images/slide-2.jpg)" class="carousel-cell" id="carousel-cell2">
+		  	<div class="container">
+		  		<h2>które</h2>
+		  	</div>
+		  </div>
+		  <div style="background-image: url(images/slide-3.jpg)" class="carousel-cell" id="carousel-cell3">
+		  	<div class="container">
+		  		<h2>musisz</h2>
+		  	</div>
+		  </div>
+		  <div style="background-image: url(images/slide-4.jpg)" class="carousel-cell" id="carousel-cell4">
+		  	<div class="container">
+		  		<h2>zjeść</h2>
+		  	</div>
+		  </div>
+		  <div style="background-image: url(images/slide-5.jpg)" class="carousel-cell" id="carousel-cell5">
+		  	<div class="container">
+		  		<h2>we Wrocławiu</h2>
+		  	</div>
+		  </div>
+		</div>
+		<div class="progress-bar"></div>
+		<button id="reset">Reset</button>
+    	<script src="vendor/flickity.pkgd.min.js"></script>
+       	<script src="vendor/hash.js"></script>
+    	<script src="js/script.js"></script>
+    </body>
+</html>
