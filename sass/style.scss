@@ -27,6 +27,13 @@ $break-sm: 768px;
 	    background-position: center;
 	    .container {
 	  	  max-width: 1200px;
+          p {
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 25px;
+            font-weight: 600;
+            color: white;
+          }
 	  }
 	}
 	.flickity-page-dots {

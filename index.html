@@ -11,35 +11,65 @@
     </head>
     <body>
 		<div class="main-carousel" data-flickity='{ "hash": true }'>
-		  <div style="background-image: url(images/slide-1.jpg)" class="carousel-cell" id="carousel-cell1">
-		  	<div class="container">
-		  		<h2>Najlepsze pizze</h2>
-		  	</div>
-		  </div>
 		  <div style="background-image: url(images/slide-2.jpg)" class="carousel-cell" id="carousel-cell2">
-		  	<div class="container">
-		  		<h2>które</h2>
-		  	</div>
-		  </div>
-		  <div style="background-image: url(images/slide-3.jpg)" class="carousel-cell" id="carousel-cell3">
-		  	<div class="container">
-		  		<h2>musisz</h2>
-		  	</div>
-		  </div>
-		  <div style="background-image: url(images/slide-4.jpg)" class="carousel-cell" id="carousel-cell4">
-		  	<div class="container">
-		  		<h2>zjeść</h2>
-		  	</div>
-		  </div>
-		  <div style="background-image: url(images/slide-5.jpg)" class="carousel-cell" id="carousel-cell5">
-		  	<div class="container">
-		  		<h2>we Wrocławiu</h2>
-		  	</div>
 		  </div>
 		</div>
 		<div class="progress-bar"></div>
 		<button id="reset">Reset</button>
-    	<script src="vendor/flickity.pkgd.min.js"></script>
+		<script id="template-slider" type="x-tmpl-mustache">
+			<div style="background-image: url({{ image }})" class="carousel-cell" id="carousel-cell1">
+			  	<div class="container">
+			  		<h2>{{ title }}</h2>
+			  		{{{ description }}}
+			  	</div>
+			</div>
+		  </script>
+		<script>
+			var sliderData = [
+				{
+					title: 'Najlepsze pizze', 
+					description: '<p>lorem ipsum</p>',
+			    	image: 'images/slide-1.jpg'
+				},
+				{
+					title: 'które', 
+					description: '<p>lorem ipsum</p>',
+			    	image: 'images/slide-2.jpg'
+				},
+				{
+					title: 'można', 
+					description: '<p>lorem ipsum</p>',
+			    	image: 'images/slide-3.jpg'
+				},
+				{
+					title: 'zjeść', 
+					description: '<p>lorem ipsum</p>',
+			    	image: 'images/slide-4.jpg'
+				},
+				{
+					title: 'we Wrocławiu', 
+					description: '<p>lorem ipsum</p>',
+			    	image: 'images/slide-5.jpg'
+				}
+			];
+		</script>
+
+       	<script src="vendor/mustache.js"></script>
+       	<script>
+	       	var sliderContainer = document.querySelector('.main-carousel');
+
+			var templateSlider = document.getElementById('template-slider').innerHTML;
+			Mustache.parse(templateSlider);
+
+			var generatedSlider = '';
+
+			for (var i = 0; i < sliderData.length; i++){
+				generatedSlider += Mustache.render(templateSlider, sliderData[i]);
+			}
+
+			sliderContainer.insertAdjacentHTML('afterbegin', generatedSlider);
+		</script>
+       	<script src="vendor/flickity.pkgd.min.js"></script>
        	<script src="vendor/hash.js"></script>
     	<script src="js/script.js"></script>
     </body>

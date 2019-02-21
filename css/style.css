@@ -20,6 +20,14 @@
   max-width: 1200px;
 }
 
+.main-carousel .carousel-cell .container p {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+
 .main-carousel .flickity-page-dots {
   display: none;
 }
