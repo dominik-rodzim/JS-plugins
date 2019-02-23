@@ -1,80 +1,23 @@
-.main-carousel {
-  position: relative;
-}
+.main-carousel { position: relative; }
 
-.main-carousel .carousel-cell {
-  width: 100%;
-  height: 50vh;
-  min-height: 250px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  background-size: cover;
-  background-position: center;
-}
+.main-carousel .carousel-cell { width: 100%; height: 50vh; min-height: 250px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; background-size: cover; background-position: center; }
 
-.main-carousel .carousel-cell .container {
-  max-width: 1200px;
-}
+.main-carousel .carousel-cell .container { max-width: 1200px; }
 
-.main-carousel .carousel-cell .container p {
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 25px;
-  font-weight: 600;
-  color: white;
-}
+.main-carousel .carousel-cell .container p { text-align: center; font-family: Montserrat; font-size: 25px; font-weight: 600; color: white; }
 
-.main-carousel .flickity-page-dots {
-  display: none;
-}
+.main-carousel .flickity-page-dots { display: none; }
 
-.progress-bar {
-  height: 20px;
-  width: 0;
-  background: orange;
-}
+.progress-bar { height: 20px; width: 0; background: orange; }
 
-#reset {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  font-family: Montserrat;
-  color: white;
-  background: orange;
-  border: none;
-  padding: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 2px;
-  transition: .3s;
-  cursor: pointer;
-}
+#reset { position: absolute; top: 30px; right: 30px; font-family: Montserrat; color: white; background: orange; border: none; padding: 20px; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; transition: .3s; cursor: pointer; }
 
-@media only screen and (max-width: 768px) {
-  #reset {
-    font-size: 15px;
-  }
-}
+@media only screen and (max-width: 768px) { #reset { font-size: 15px; } }
 
-#reset:hover {
-  letter-spacing: 3px;
-}
+#reset:hover { letter-spacing: 3px; }
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.7);
-  font-size: 60px;
-  color: orange;
-}
+h2 { font-family: 'Montserrat', sans-serif; padding: 10px; background: rgba(255, 255, 255, 0.7); font-size: 60px; color: orange; }
 
-@media only screen and (max-width: 768px) {
-  h2 {
-    font-size: 26px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+@media only screen and (max-width: 768px) { h2 { font-size: 26px; } }
+
+#map { height: 50vh; width: 100%; }

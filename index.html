@@ -11,11 +11,11 @@
     </head>
     <body>
 		<div class="main-carousel" data-flickity='{ "hash": true }'>
-		  <div style="background-image: url(images/slide-2.jpg)" class="carousel-cell" id="carousel-cell2">
 		  </div>
 		</div>
 		<div class="progress-bar"></div>
 		<button id="reset">Reset</button>
+		<div id="map"></div>
 		<script id="template-slider" type="x-tmpl-mustache">
 			<div style="background-image: url({{ image }})" class="carousel-cell" id="carousel-cell1">
 			  	<div class="container">
@@ -29,27 +29,32 @@
 				{
 					title: 'Najlepsze pizze', 
 					description: '<p>lorem ipsum</p>',
-			    	image: 'images/slide-1.jpg'
+			    	image: 'images/slide-1.jpg',
+			    	coords: {lat: 51.075150, lng: 17.016275}
 				},
 				{
 					title: 'które', 
 					description: '<p>lorem ipsum</p>',
-			    	image: 'images/slide-2.jpg'
+			    	image: 'images/slide-2.jpg',
+			    	coords: {lat: 51.113562, lng: 17.036027}
 				},
 				{
 					title: 'można', 
 					description: '<p>lorem ipsum</p>',
-			    	image: 'images/slide-3.jpg'
+			    	image: 'images/slide-3.jpg',
+			    	coords: {lat: 51.111022, lng: 17.034040}
 				},
 				{
 					title: 'zjeść', 
 					description: '<p>lorem ipsum</p>',
-			    	image: 'images/slide-4.jpg'
+			    	image: 'images/slide-4.jpg',
+			    	coords: {lat: 51.126146, lng: 16.985545}
 				},
 				{
 					title: 'we Wrocławiu', 
 					description: '<p>lorem ipsum</p>',
-			    	image: 'images/slide-5.jpg'
+			    	image: 'images/slide-5.jpg',
+			    	coords: {lat: 51.099981, lng: 17.029848}
 				}
 			];
 		</script>
@@ -72,5 +77,6 @@
        	<script src="vendor/flickity.pkgd.min.js"></script>
        	<script src="vendor/hash.js"></script>
     	<script src="js/script.js"></script>
+    	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXN3z15et_34LFmrdSUjnHn2R12VbgWQ8&callback=initMap"></script>
     </body>
 </html>
